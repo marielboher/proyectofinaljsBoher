@@ -3,6 +3,7 @@ const tbody = document.querySelector("#tabla");
 let mensaje = document.querySelector(".carrito-p");
 let compra = new Compra();
 
+//cargo  productos en carrito
 
 const mostrarCarrito = () => {
   let tablaCarrito = "";
@@ -24,6 +25,7 @@ const mostrarCarrito = () => {
 };
 mostrarCarrito()
 
+//vacio productos del carrito
 
 const vaciarCarro = () => {
   vaciarCarrito.addEventListener("click", () => {
@@ -34,16 +36,16 @@ const vaciarCarro = () => {
 }
 vaciarCarro()
 
+//velimino productos del carrito
+
 function btnEliminar() {
   const buttonsDelete = document.querySelectorAll("button.btn-delete-cart.btn-add");
   buttonsDelete.forEach(btn => {
     btn.addEventListener("click", () => {
-      let pos = carrito.findIndex((prod) => prod.nombre === btn.id);
-      if (pos > -1) {
-        carrito.splice(pos, 1);
+      let getDelete = carrito.findIndex((prod) => prod.nombre === btn.id);
+      if (getDelete > -1) {
+        carrito.splice(getDelete, 1);
         localStorage.setItem("prodCarrito", JSON.stringify(carrito));
-        // alerta(`Eliminaste '${pos.nombre}' al carrito`, "red");
-
         mostrarCarrito();
         btnEliminar();
       }
@@ -52,6 +54,7 @@ function btnEliminar() {
 }
 btnEliminar();
 
+//vFinalizacion de la compra
 
   const btnCompraCarrito = document.querySelector("#continuarCompra")
   let mostarTotalModal = document.querySelector('#mostrarTotalCompra')
@@ -63,8 +66,8 @@ btnEliminar();
       toast: true,
       position: 'top-end',
       showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
+      timer: 2000,
+      timerProgressBar: false,
       didOpen: (toast) => {
         toast.addEventListener('mouseenter', Swal.stopTimer)
         toast.addEventListener('mouseleave', Swal.resumeTimer)

@@ -5,25 +5,19 @@ let productos = [];
 let resultadoBusqueda = [];
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  traerDatos();
-});
+//traigo datos con fetch y promesas
 
-async function traerDatos() {
-  try {
-    const response = await fetch("bbdd/productos.json");
-    const data = await response.json();
-    if (data.length > 0) {
-      productos.push(...data);
+fetch("bbdd/productos.json")
+.then(response => response.json())
+.then(data => {
+  productos.push(...data);
       getCards(productos);
-      // getBtn();
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
+})
+.catch(error => {
+  console.log(error)
+})
 
-// generar cards shop
+// genero cards shop y activo la el boton agregar
 
 const cardTienda = document.getElementById("cardTienda");
 
@@ -35,7 +29,6 @@ const getCards = (prod) => {
     });
     cardTienda.innerHTML = cargarPagina;
   }
-
 
   let botonesAdd = document.querySelectorAll(".btn-add");
   botonesAdd = [...botonesAdd];
