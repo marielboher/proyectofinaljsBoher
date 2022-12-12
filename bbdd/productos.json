@@ -1,0 +1,182 @@
+[
+    {
+        "nombre": "Auriculares in-ear inalambricos",
+        "color": "Negro",
+        "precio": 5000,
+        "id": 1,
+        "cantidad": 1,
+        "marca": "XIAOMI",
+        "imagen": "./multimedia/auricularesp.webp"
+    },
+    {
+        "nombre": "Auriculares in-ear QCY T1C",
+        "color": "Blanco",
+        "precio": 8000,
+        "id": 2,
+        "cantidad": 1,
+        "marca": "XIAOMI",
+        "imagen": "./multimedia/aurisblancos.webp"
+    },
+    {
+        "nombre": "Auriculares in-ear Redmi Airdots",
+        "color": "Negro",
+        "precio": 7000,
+        "id": 3,
+        "cantidad": 1,
+        "marca": "XIAOMI",
+        "imagen": "./multimedia/aurisinear.webp"
+    },
+    {
+        "nombre": "Auriculares in-ear Redmi Airdots 3",
+        "color": "Azul",
+        "precio": 5500,
+        "id": 4,
+        "cantidad": 1,
+        "marca": "XIAOMI",
+        "imagen": "./multimedia/aurisazul.webp"
+    },
+    {
+        "nombre": "Auriculares Tune 510BT",
+        "color": "Blanco",
+        "precio": 9000,
+        "id": 5,
+        "cantidad": 1,
+        "marca": "JBL",
+        "imagen": "./multimedia/aurisjbl.webp"
+    },
+    {
+        "nombre": "Auriculares in-ear Buds PRO",
+        "color": "Blanco",
+        "precio": 9800,
+        "id": 6,
+        "cantidad": 1,
+        "marca": "XIAOMI",
+        "imagen": "./multimedia/aurisplata.webp"
+    },
+    {
+        "nombre": "Auriculares in-ear GAMER GT",
+        "color": "Negro",
+        "precio": 7000,
+        "id": 7,
+        "cantidad": 1,
+        "marca": "HAYLOU",
+        "imagen": "./multimedia/aurishaylou.webp"
+    },
+    {
+        "nombre": "Auriculares in-ear Redmi Buds ",
+        "color": "Blanco",
+        "precio": 9000,
+        "id": 8,
+        "cantidad": 1,
+        "marca": "XIAOMI",
+        "imagen": "./multimedia/aurisxiaomi.webp"
+    },
+    {
+        "nombre": "Auriculares Bluetooth M10",
+        "color": "Negro",
+        "precio": 3100,
+        "id": 9,
+        "cantidad": 1,
+        "marca": "HIFISOUND",
+        "imagen": "./multimedia/auricularesbluetooth.webp"
+    },
+    {
+        "nombre": "Auriculares in ear Sony WF-C500",
+        "color": "Negro",
+        "precio": 17900,
+        "id": 10,
+        "cantidad": 1,
+        "marca": "SONY",
+        "imagen": "./multimedia/aurissony.webp"
+    },
+    {
+        "nombre": "Auriculares in-ear unnic beans",
+        "color": "Negro",
+        "precio": 6300,
+        "id": 11,
+        "cantidad": 1,
+        "marca": "UNNIC",
+        "imagen": "./multimedia/aurisunic.webp"
+    },
+    {
+        "nombre": "Auriculares Soundcore Life",
+        "color": "Rosa",
+        "precio": 79000,
+        "id": 12,
+        "cantidad": 1,
+        "marca": "SOUNDCORE",
+        "imagen": "./multimedia/aurisrosa.webp"
+    },
+    {
+        "nombre": "Auriculares BEHRINGERH HM1000",
+        "color": "Gris y Negro",
+        "precio": 9000,
+        "id": 13,
+        "cantidad": 1,
+        "marca": "BEHRINGERH",
+        "imagen": "./multimedia/aurisbehringer.webp"
+    },
+    {
+        "nombre": "Auriculares Logitech H390",
+        "color": "Negro",
+        "precio": 10000,
+        "id": 14,
+        "cantidad": 1,
+        "marca": "LOGITECH",
+        "imagen": "./multimedia/aurislogitech.webp"
+    },
+    {
+        "nombre": "Auriculares in-ear 2 Basic",
+        "color": "Blanco",
+        "precio": 6900,
+        "id": 15,
+        "cantidad": 1,
+        "marca": "XIAOMI",
+        "imagen": "./multimedia/aurispalito.webp"
+    },
+    {
+        "nombre": "Auriculares JBL WAVE 300TWS",
+        "color": "Negro",
+        "precio": 25000,
+        "id": 16,
+        "cantidad": 1,
+        "marca": "JBL",
+        "imagen": "./multimedia/aurisjblpalito.webp"
+    },
+    {
+        "nombre": "Auriculares Aiwa BT301",
+        "color": "Blanco",
+        "precio": 8000,
+        "id": 17,
+        "cantidad": 1,
+        "marca": "AIWA",
+        "imagen": "./multimedia/aurisaiwa.webp"
+    },
+    {
+        "nombre": "Auriculares inalambricos Lenovo",
+        "color": "Negro",
+        "precio": 7400,
+        "id": 17,
+        "cantidad": 1,
+        "marca": "LENOVO",
+        "imagen": "./multimedia/aurislenovo.webp"
+    },
+    {
+        "nombre": "Auriculares Gamer con luz",
+        "color": "Negro",
+        "precio": 6900,
+        "id": 18,
+        "cantidad": 1,
+        "marca": "TDAGGER",
+        "imagen": "./multimedia/aurisdagger.webp"
+    },
+    {
+        "nombre": "Auriculares Soundcore Life Series",
+        "color": "Negro",
+        "precio": 17900,
+        "id": 19,
+        "cantidad": 1,
+        "marca": "SOUNDCORE",
+        "imagen": "./multimedia/aurissound.webp"
+    }
+]
