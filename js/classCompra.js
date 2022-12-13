@@ -2,10 +2,10 @@ class Compra {
   constructor(carrito) {
     this.carrito = carrito;
   }
-    totalAPagar() {
+  totalAPagar() {
     return carrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0).toFixed(2);
   }
-  totalCompra(){
+  totalCompra() {
     let precioTotal = document.querySelector("#total");
     precioTotal.innerHTML = `${this.totalAPagar()}`
   }

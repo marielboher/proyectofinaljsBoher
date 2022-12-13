@@ -19,9 +19,8 @@ function cart(producto) {
       </div>
       <h4>$${producto.precio.toFixed(2)}</h4>
   </div>
-  <button class="btn-add" id="${producto.id}" title="Clic para agregar '${
-    producto.nombre
-  }' al carrito"><i class="fa-solid fa-bag-shopping carro"></i></button>
+  <button class="btn-add" id="${producto.id}" title="Clic para agregar '${producto.nombre
+    }' al carrito"><i class="fa-solid fa-bag-shopping carro"></i></button>
 </div>
   `;
 }

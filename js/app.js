@@ -8,17 +8,14 @@ let productos = [];
 //traigo datos con fetch y promesas
 
 fetch("bbdd/productos.json")
-.then(response => response.json())
-.then(data => {
-  productos.push(...data);
-      getCards(productos);
-})
-.catch(error => {
-  console.log(error)
-})
+  .then(response => response.json())
+  .then(data =>  productos.push(...data))
+  .then(() => getCards(productos))
+  .catch(error => {
+    console.log(error)
+  })
 
 // genero cards shop y activo la el boton agregar si ya esta el producto en el carrito aumenta la cantidad
-
 
 const getCards = (prod) => {
   let cargarPagina = "";
@@ -36,13 +33,13 @@ const getCards = (prod) => {
       let actualId = parseInt(event.currentTarget.id);
       let productoAcual = productos.find(item => item.id == actualId);
       let repetido = carrito.some((prodRepetido) => prodRepetido.id === productoAcual.id)
-      if(repetido){
+      if (repetido) {
         carrito.map((prod) => {
-          if(prod.id === productoAcual.id){
+          if (prod.id === productoAcual.id) {
             prod.cantidad++;
           }
         });
-      }else{
+      } else {
         carrito.push({
           id: productoAcual.id,
           imagen: productoAcual.imagen,
@@ -64,6 +61,7 @@ const saveLocal = () => {
 
 //filtro de busqueda
 
+
 btnBusqueda.addEventListener("click", () => {
   filter = formulario.value.toUpperCase();
   let getResult = productos.filter((producto) =>
@@ -72,7 +70,8 @@ btnBusqueda.addEventListener("click", () => {
   if (getResult.length > 0) {
     getCards(getResult);
   } else {
-    console.log("producto no encontrado");
+    alerta('No se encontraron productos coincidentes!', "#d84949")
   }
 });
+
 
