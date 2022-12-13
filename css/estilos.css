@@ -96,27 +96,13 @@ body{
     color: #088170;
 }
 
-/* home */
-/* .container-i {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: min-content min-content min-content auto;
-    gap: 5px 5px;
-    grid-template-areas:
-      "hero img"
-      "des-box des-box"
-      "prod-des prod-des"
-      "banner banner"
-  } */
 
 
   .img {
-      /* grid-area: img; */
       height: 90vh;
       width: 100%;
       padding: 0 80px;
       display: flex;
-      /* flex-direction: row; */
       align-items: center;
     }
 
@@ -437,7 +423,7 @@ footer a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .busqueda{
     border: #088170;
@@ -454,7 +440,6 @@ footer a:hover {
     color: #ffff;
     margin-left: 8px;
     font-size: 17px;
-
 }
 
 
@@ -530,7 +515,7 @@ footer a:hover {
     width: 70px;
 }
 #cart table thead tr{
-text-align: center;
+   text-align: center;
 }
 
 #cart table td:nth-child(1){
@@ -566,10 +551,10 @@ text-align: center;
 #cart table thead th{
     text-transform: uppercase;
     font-size: 13px;
-    padding: 18px 0;
 }
 #cart table tbody tr td{
- padding-top: 15px;
+ padding-top: 25px;
+ font-size: 15px;
 }
 
 #cart table tbody td{
@@ -612,7 +597,6 @@ text-align: center;
     font-size: 15px;
     padding: 2px;
     background-color: rgba(255, 255, 255, 0.493);
-
 }
 .total-compra{
     display: flex;
@@ -990,9 +974,9 @@ padding-top: 15px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 0px;
     flex-wrap: wrap;
-    margin: 15px;
+    margin: 0px;
 }
 
 .product1{
@@ -1005,37 +989,17 @@ padding-top: 15px;
     width: 45%;
     height: 420px;
     padding: 10px 12px;
-    border: 1px solid #cce7d0;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 15px 0;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    transition: 0.2s ease;
 }
-.prod:hover{
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-}
+
 .prod-i{
     width: 90%;
     height: 350px;
     border: 1px solid #cce7d0;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    transition: 0.2s ease;
-    background-color: #e3e6f3;
 }
 .prod-i img{
     width: 100%;
     max-height: auto;
     border-radius: 20px;
-}
-.prod-i button{
-    border: none;
-    background-color: #e3e6f3;
-}
-.prod-i button:hover{
-    transform: scale(1.1);
 }
 
 .cont-img{
@@ -1049,64 +1013,29 @@ padding-top: 15px;
     max-height: 200px;
     border-radius: 20px;
 }
-.prod button{
-    border: none;
-    background-color: #e3e6f3;
-}
-.prod button:hover{
-    transform: scale(1.1);
-}
-.des{
-    text-align: start;
-    padding: 10px 0;
-}
-.des p{
-    margin: 0;
-}
-.des span{
-   color: #686063;
-   font-size: 12px;
-}
 
-.des h5{
-    color: #1a1a1a;
-    font-size: 14px;
-}
-
-.des i{
-    font-size: 12px;
-    color: rgb(243, 181, 25);
-}
-
-.des h4{
-   padding-top: 2px;
-   font-size: 15px;
-   font-weight: 700;
-   color: #088170;
-}
-
-.carro{
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
-    color: #088170;
-    margin-bottom: 5px;
-}
 
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 375px){
 
   .hero{
     padding: 40px;
     background-position: 55%;
 
   }
-  img{
-    margin-right: 150px;
+  .img {
+    height: 30vh;
+    width: 100%;
+    padding: 0 0px;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
   }
+  .auris{
+    height: 200px;
+}
+
 
   .destacadas .dest-box{
     width: 155px;
@@ -1121,9 +1050,9 @@ padding-top: 15px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 0px;
     flex-wrap: wrap;
-    margin: 15px;
+    margin: 0px;
 }
 
 .product1{
@@ -1136,94 +1065,46 @@ padding-top: 15px;
     width: 60%;
     height: 450px;
     padding: 10px 12px;
-    border: 1px solid #cce7d0;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 15px 0;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    transition: 0.2s ease;
-}
-.prod:hover{
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 }
 .prod-i{
     width: 90%;
     height: 350px;
     border: 1px solid #cce7d0;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    transition: 0.2s ease;
-    background-color: #e3e6f3;
+
 }
 .prod-i img{
     width: 100%;
     max-height: auto;
     border-radius: 20px;
 }
-.prod-i button{
-    border: none;
-    background-color: #e3e6f3;
-}
-.prod-i button:hover{
-    transform: scale(1.1);
-}
 
 .cont-img{
     width: 100%;
     height: 200px;
-    background-color: #ffff;
-    border-radius: 5px;
 }
 .prod img{
     width: 100%;
     max-height: 200px;
     border-radius: 20px;
 }
-.prod button{
-    border: none;
-    background-color: #e3e6f3;
+.total-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
 }
-.prod button:hover{
-    transform: scale(1.1);
+.total-center p{
+  color: #088170;
+  font-size: 15px;
+  padding: 2px;
+  background-color: rgba(255, 255, 255, 0.493);
 }
-.des{
-    text-align: start;
-    padding: 10px 0;
-}
-.des p{
-    margin: 0;
-}
-.des span{
-   color: #686063;
-   font-size: 12px;
-}
-
-.des h5{
-    color: #1a1a1a;
-    font-size: 14px;
+.total-compra{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.des i{
-    font-size: 12px;
-    color: rgb(243, 181, 25);
-}
-
-.des h4{
-   padding-top: 2px;
-   font-size: 15px;
-   font-weight: 700;
-   color: #088170;
-}
-
-.carro{
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
-    color: #088170;
-    margin-bottom: 5px;
-}
 
 }
