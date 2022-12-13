@@ -1,8 +1,8 @@
 const busqueda = document.querySelector("#busqueda");
 const btnBusqueda = document.querySelector("button.btnBusqueda");
 const formulario = document.querySelector("#busqueda");
+const cardTienda = document.getElementById("cardTienda");
 let productos = [];
-let resultadoBusqueda = [];
 
 
 //traigo datos con fetch y promesas
@@ -17,9 +17,8 @@ fetch("bbdd/productos.json")
   console.log(error)
 })
 
-// genero cards shop y activo la el boton agregar
+// genero cards shop y activo la el boton agregar si ya esta el producto en el carrito aumenta la cantidad
 
-const cardTienda = document.getElementById("cardTienda");
 
 const getCards = (prod) => {
   let cargarPagina = "";
@@ -63,35 +62,7 @@ const saveLocal = () => {
   localStorage.setItem("prodCarrito", JSON.stringify(carrito));
 };
 
-// function getBtn(prodId){
-//   let botonesAdd = document.querySelectorAll(".btn-add");
-//   botonesAdd.forEach((boton) => {
-//     const item = productos.find(prod => prod.id === prodId)
-//     boton.addEventListener("click", () => {
-//       console.log(carrito)
-//       console.log(item)
-
-//         carrito.push(item);
-//         localStorage.setItem("prodCarrito", JSON.stringify(carrito));
-//         alerta(`Agregaste '${productoAcual.nombre}' al carrito`, "#088170");
-
-//     });
-//   })
-// }
-      // let existe = false;
-      // carrito.map((auri) => {
-      //   if (actualId == auri.id) {
-      //     existe = true;
-      //   }
-      // });
-      // if (existe) {
-      //   productoAcual.cantidad += 1;
-      //   console.log(productoAcual);
-      //   localStorage.setItem("prodCarrito", JSON.stringify(carrito));
-      //   alerta(`Agregaste '${productoAcual.nombre}' al carrito`, "#088170");
-      // } else {
-
-
+//filtro de busqueda
 
 btnBusqueda.addEventListener("click", () => {
   filter = formulario.value.toUpperCase();

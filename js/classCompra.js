@@ -9,5 +9,4 @@ class Compra {
     let precioTotal = document.querySelector("#total");
     precioTotal.innerHTML = `${this.totalAPagar()}`
   }
-
 }

@@ -36,7 +36,7 @@ const vaciarCarro = () => {
 }
 vaciarCarro()
 
-//velimino productos del carrito
+//elimino productos del carrito
 
 function btnEliminar() {
   const buttonsDelete = document.querySelectorAll("button.btn-delete-cart.btn-add");
@@ -54,7 +54,7 @@ function btnEliminar() {
 }
 btnEliminar();
 
-//vFinalizacion de la compra
+//Finalizacion de la compra
 
   const btnCompraCarrito = document.querySelector("#continuarCompra")
   let mostarTotalModal = document.querySelector('#mostrarTotalCompra')
@@ -78,7 +78,7 @@ btnEliminar();
     aceptarCompraModal.addEventListener('click', () =>{
       Toast.fire({
         icon: 'success',
-        title: 'Gracias por su compra'
+        title: 'Gracias por su compra!'
       })
       carrito.length = []
       localStorage.clear();
