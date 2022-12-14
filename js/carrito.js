@@ -7,7 +7,6 @@ let compra = new Compra();
 
 const mostrarCarrito = () => {
   let tablaCarrito = "";
-
   if (carrito.length >= 0) {
     carrito.forEach((producto) =>
       (tablaCarrito += armarCarrito(producto)),
@@ -22,6 +21,7 @@ const mostrarCarrito = () => {
     `;
   }
   compra.totalCompra()
+
 };
 mostrarCarrito()
 
@@ -29,30 +29,41 @@ mostrarCarrito()
 
 const vaciarCarro = () => {
   vaciarCarrito.addEventListener("click", () => {
-    carrito.length = [];
-    localStorage.clear();
-    mostrarCarrito();
+      if(carrito.length > 0){
+      carrito.length = [];
+      localStorage.clear();
+      mostrarCarrito();
+     }else{
+      Toast.fire({
+        icon: 'info',
+        title: 'Tu carrito esta vacio!'
+      })
+     }
   });
 }
 vaciarCarro()
 
 //elimino productos del carrito
 
-function btnEliminar() {
+function actualizarBotonesDelete() {
   const buttonsDelete = document.querySelectorAll("button.btn-delete-cart.btn-add");
   buttonsDelete.forEach(btn => {
-    btn.addEventListener("click", () => {
-      let getDelete = carrito.findIndex((prod) => prod.nombre === btn.id);
-      if (getDelete > -1) {
-        carrito.splice(getDelete, 1);
-        localStorage.setItem("prodCarrito", JSON.stringify(carrito));
-        mostrarCarrito();
-        btnEliminar();
-      }
-    });
-  });
+    btn.addEventListener("click", removeItems)
+  })
 }
-btnEliminar();
+actualizarBotonesDelete()
+
+function removeItems(e) {
+  let idBoton = e.currentTarget.id;
+  let produtoEliminar = carrito.findIndex(producto => producto.nombre === idBoton);
+  if (produtoEliminar > -1) {
+    carrito.splice(produtoEliminar, 1);
+    saveLocal()
+    mostrarCarrito()
+    actualizarBotonesDelete()
+  }
+}
+
 
 //Finalizacion de la compra
 
@@ -76,7 +87,7 @@ const Toast = Swal.mixin({
 
 let aceptarCompraModal = document.querySelector('#aceptarCompra')
 aceptarCompraModal.addEventListener('click', () => {
-  if(carrito.length > 0){
+  if (carrito.length > 0) {
     Toast.fire({
       icon: 'success',
       title: 'Gracias por su compra!'
@@ -84,11 +95,13 @@ aceptarCompraModal.addEventListener('click', () => {
     carrito.length = []
     localStorage.clear();
     mostrarCarrito()
-  }else{
+  } else {
     Toast.fire({
       icon: 'info',
       title: 'Tu carrito esta vacio!'
     })
   }
 })
+
+
 

@@ -4,10 +4,9 @@ const formulario = document.querySelector("#busqueda");
 const cardTienda = document.getElementById("cardTienda");
 let productos = [];
 
-
 //traigo datos con fetch y promesas
 
-fetch("bbdd/productos.json")
+fetch("database/productos.json")
   .then(response => response.json())
   .then(data =>  productos.push(...data))
   .then(() => getCards(productos))
@@ -15,12 +14,12 @@ fetch("bbdd/productos.json")
     console.log(error)
   })
 
-// genero cards shop y activo la el boton agregar si ya esta el producto en el carrito aumenta la cantidad
+// genero cards shop y activo el boton agregar si ya esta el producto en el carrito aumenta la cantidad
 
 const getCards = (prod) => {
   let cargarPagina = "";
   if (prod.length > 0) {
-    prod.forEach((producto) => {
+    prod.map((producto) => {
       cargarPagina += cart(producto);
     });
     cardTienda.innerHTML = cargarPagina;
@@ -50,17 +49,15 @@ const getCards = (prod) => {
       }
       alerta(`Agregaste '${productoAcual.nombre}' al carrito`, "#088170");
       saveLocal()
+
     });
+
   });
   ;
 };
 
-const saveLocal = () => {
-  localStorage.setItem("prodCarrito", JSON.stringify(carrito));
-};
 
 //filtro de busqueda
-
 
 btnBusqueda.addEventListener("click", () => {
   filter = formulario.value.toUpperCase();

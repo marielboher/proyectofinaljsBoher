@@ -104,7 +104,6 @@ body {
 }
 
 
-
 .img {
   height: 90vh;
   width: 100%;
@@ -199,7 +198,6 @@ body {
 .pro-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
   flex-wrap: wrap;
   margin: 15px;
 }
@@ -702,6 +700,26 @@ footer a:hover {
   color: #ffff;
 }
 
+.sumar{
+  margin-left: 5px;
+  border: none;
+  width: 15px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #088170;
+  font-size: 15px;
+}
+.restar{
+  margin-right: 5px;
+  border: none;
+  width: 15px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #088170;
+  font-size: 15px;
+}
 
 /* queries */
 

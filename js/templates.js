@@ -1,5 +1,9 @@
 const carrito = JSON.parse(localStorage.getItem("prodCarrito")) || [];
 
+const saveLocal = () => {
+  localStorage.setItem("prodCarrito", JSON.stringify(carrito));
+};
+
 function cart(producto) {
   return `
   <div class="prod">
