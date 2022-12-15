@@ -156,7 +156,7 @@
         "nombre": "Auriculares inalambricos Lenovo",
         "color": "Negro",
         "precio": 7400,
-        "id": 17,
+        "id": 18,
         "cantidad": 1,
         "marca": "LENOVO",
         "imagen": "./multimedia/aurislenovo.webp"
@@ -165,7 +165,7 @@
         "nombre": "Auriculares Gamer con luz",
         "color": "Negro",
         "precio": 6900,
-        "id": 18,
+        "id": 19,
         "cantidad": 1,
         "marca": "TDAGGER",
         "imagen": "./multimedia/aurisdagger.webp"
@@ -174,7 +174,7 @@
         "nombre": "Auriculares Soundcore Life Series",
         "color": "Negro",
         "precio": 17900,
-        "id": 19,
+        "id": 20,
         "cantidad": 1,
         "marca": "SOUNDCORE",
         "imagen": "./multimedia/aurissound.webp"
