@@ -63,5 +63,8 @@ btnBusqueda.addEventListener("click", () => {
     producto.nombre.toUpperCase().includes(filter)
   );
   getResult.length > 0 ? getCards(getResult) : alerta("No se encontraron productos coincidentes!", "#d84949");
+  if(busqueda.length = ''){
+    getCards(productos)
+  }
 });
 

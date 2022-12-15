@@ -63,12 +63,11 @@ function removeItems(e) {
   let produtoEliminar = carrito.findIndex(
     (producto) => producto.nombre === idBoton
   );
-  if (produtoEliminar > -1) {
     carrito.splice(produtoEliminar, 1);
     saveLocal();
     mostrarCarrito();
     actualizarBotonesDelete();
-  }
+  
 }
 
 //Finalizacion de la compra
@@ -96,6 +95,7 @@ aceptarCompraModal.addEventListener("click", () => {
   if (carrito.length > 0) {
     Toast.fire({
       icon: "success",
+      width: "300px",
       title: "Gracias por su compra!",
     });
     carrito.length = [];
