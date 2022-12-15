@@ -7,12 +7,12 @@ let productos = [];
 //traigo datos con fetch y promesas
 
 fetch("database/productos.json")
-  .then(response => response.json())
-  .then(data =>  productos.push(...data))
+  .then((response) => response.json())
+  .then((data) => productos.push(...data))
   .then(() => getCards(productos))
-  .catch(error => {
-    console.log(error)
-  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // genero cards shop y activo el boton agregar si ya esta el producto en el carrito aumenta la cantidad
 
@@ -28,10 +28,12 @@ const getCards = (prod) => {
   let botonesAdd = document.querySelectorAll(".btn-add");
   botonesAdd = [...botonesAdd];
   botonesAdd.forEach((boton) => {
-    boton.addEventListener("click", event => {
+    boton.addEventListener("click", (event) => {
       let actualId = parseInt(event.currentTarget.id);
-      let productoAcual = productos.find(item => item.id == actualId);
-      let repetido = carrito.some((prodRepetido) => prodRepetido.id === productoAcual.id)
+      let productoAcual = productos.find((item) => item.id == actualId);
+      let repetido = carrito.some(
+        (prodRepetido) => prodRepetido.id === productoAcual.id
+      );
       if (repetido) {
         carrito.map((prod) => {
           if (prod.id === productoAcual.id) {
@@ -48,14 +50,10 @@ const getCards = (prod) => {
         });
       }
       alerta(`Agregaste '${productoAcual.nombre}' al carrito`, "#088170");
-      saveLocal()
-
+      saveLocal();
     });
-
   });
-  ;
 };
-
 
 //filtro de busqueda
 
@@ -64,11 +62,6 @@ btnBusqueda.addEventListener("click", () => {
   let getResult = productos.filter((producto) =>
     producto.nombre.toUpperCase().includes(filter)
   );
-  if (getResult.length > 0) {
-    getCards(getResult);
-  } else {
-    alerta('No se encontraron productos coincidentes!', "#d84949")
-  }
+  getResult.length > 0 ? getCards(getResult) : alerta("No se encontraron productos coincidentes!", "#d84949");
 });
-
 
